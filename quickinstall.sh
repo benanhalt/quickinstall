@@ -11,7 +11,7 @@ apt-get -qq update && apt-get -qq dist-upgrade
 
 #Install stuff I use all the time
 echo -e "\nInstalling default packages...\n"
-apt-get -qq install build-essential checkinstall docker.io fail2ban git git-core libbz2-dev libc6-dev libgdbm-dev libncursesw5-dev libreadline-gplv2-dev libsqlite3-dev libssl-dev nikto nmap nodejs python-dev python-numpy python-scipy python-setuptools tk-dev unattended-upgrades ufw
+apt-get -qq install build-essential fail2ban git unattended-upgrades ufw
 
 
 #Install and configure firewall
@@ -28,9 +28,9 @@ echo -e "\nUpdating Timezone to UTC...\n"
 sudo timedatectl set-timezone UTC
 
 #Install Ruby
-echo -e "\nInstalling Ruby...\n"
-curl -L https://get.rvm.io | bash -s stable --ruby
+#echo -e "\nInstalling Ruby...\n"
+#curl -L https://get.rvm.io | bash -s stable --ruby
 
 #PCAP Everything
-echo -e "\nRunning docker: pcap...\n"
-docker run -v ~/pcap:/pcap --net=host -d jgamblin/tcpdump
+#echo -e "\nRunning docker: pcap...\n"
+#docker run -v ~/pcap:/pcap --net=host -d jgamblin/tcpdump
