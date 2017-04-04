@@ -4,6 +4,9 @@
 # complete license text
 # Source code at https://github.com/jgamblin/quickinstall
 
+echo -e "\nAdding emacs ppa...\n"
+add-apt-repository -y ppa:ubuntu-elisp/ppa
+
 # Upgrade installed packages to latest
 echo -e "\nRunning a package upgrade...\n"
 apt-get -qq update && apt-get -qq dist-upgrade
@@ -11,7 +14,7 @@ apt-get -qq update && apt-get -qq dist-upgrade
 
 #Install stuff I use all the time
 echo -e "\nInstalling default packages...\n"
-apt-get -qq install build-essential fail2ban git unattended-upgrades ufw
+apt-get -qq install build-essential fail2ban git unattended-upgrades ufw emacs-snapshot
 
 
 #Install and configure firewall
