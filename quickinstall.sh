@@ -14,7 +14,7 @@ apt-get -qq update && apt-get -qq dist-upgrade
 
 #Install stuff I use all the time
 echo -e "\nInstalling default packages...\n"
-apt-get -qq install build-essential fail2ban git unattended-upgrades ufw emacs-snapshot
+apt-get -qq install fail2ban git unattended-upgrades ufw emacs-snapshot
 
 
 #Install and configure firewall
@@ -37,3 +37,6 @@ sudo timedatectl set-timezone UTC
 #PCAP Everything
 #echo -e "\nRunning docker: pcap...\n"
 #docker run -v ~/pcap:/pcap --net=host -d jgamblin/tcpdump
+
+echo -e "\nAdding regular user...\n"
+adduser --disabled-password --gecos "" ben
