@@ -9,7 +9,7 @@ add-apt-repository -y ppa:ubuntu-elisp/ppa
 
 # Upgrade installed packages to latest
 echo  "\nRunning a package upgrade...\n"
-apt-get -qq update && apt-get -qq -y dist-upgrade
+apt-get -qq update && apt-get -qq -y -o Dpkg::Options::=--force-confnew dist-upgrade
 
 
 # Install stuff I use all the time
